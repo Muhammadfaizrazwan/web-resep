@@ -1,0 +1,149 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    height: 60px;
+    width: 90px;
+    margin-left: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 50%;
+}
+
+#search {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 40px; /* Offset for the search icon */
+    background-color: #eaeef2; /* Background color similar to the one in the image */
+    border: 1px solid #ccc; /* Border color */
+    color: #777; /* Text color */
+}
+
+#search::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.search-container::before {
+    content: "\1F50D"; /* Unicode character for magnifying glass */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+}
+
+.menu-icons {
+    display: block;
+    align-items: center;
+}
+
+.icon {
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gambar{
+    width: 1200px;
+    height: 500px;
+}
+
+.gambar img{
+    height: 100%;
+    width: 100%;
+}
+.content {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #555;
+}
+
+p {
+    color: #777;
+    line-height: 1.6;
+}
+
+ol {
+    margin-left: 20px;
+    color: #333;
+}
+
+.back-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden; /* Prevent content from overflowing */
+    z-index: 500; /* Ensure the header stays on top */
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    height: 60px;
+    width: 90px;
+    margin-left: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 50%;
+}
+
+#search {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 40px; /* Offset for the search icon */
+    background-color: #eaeef2; /* Background color similar to the one in the image */
+    border: 1px solid #ccc; /* Border color */
+    color: #777; /* Text color */
+}
+
+#search::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.search-container::before {
+    content: "\1F50D"; /* Unicode character for magnifying glass */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+}
+
+.menu-icons {
+    display: block;
+    align-items: center;
+}
+
+.icon {
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1400px;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 80px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 30px;
+    color: #333;
+}
+
+h1 span {
+    font-weight: normal;
+    color: #777;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border: 1px solid #f75454;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px; /* Spacing below each card */
+    margin-right: 20px;  /* Spacing to the right of each card */
+}
+
+.recipe-card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    max-width: 170px;
+    margin: 0 auto;
+    display: block;
+}
+
+.recipe-card h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.baca-button {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 200px;
+}
+
+.baca-selengkapnya {
+    background-color: #007bff;
+    border: none;
+    height: 60px;
+    width: 100px;
+    color: white;
+    padding: 13px;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.baca-selengkapnya:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .isi-contact h1{
+    color: #fff;
+    margin-bottom: 15px;
+    margin: 15px 240px 15px 240px;
+}
+  .isi-contact p{
+    font-size: 20px;
+  }
+  .tombol{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin: 10px 0;
+}
+  .icons{
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 60px 215px 20px 215px;
+  }
+  .icons a{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    color: #4b3ed8;
+    background-color: #fff;
+    line-height: 50px;
+    margin: 0 15px;
+    padding-bottom: 20px;
+    border-radius: 50%;
+  }

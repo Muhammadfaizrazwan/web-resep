@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    position: relative;
+    height: 60px;
+    width: 90px;
+    margin-left: 20px;
+}
+
+.search-container {
+    position: relative;
+    width: 50%;
+}
+
+#search {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 40px; /* Offset for the search icon */
+    background-color: #eaeef2; /* Background color similar to the one in the image */
+    border: 1px solid #ccc; /* Border color */
+    color: #777; /* Text color */
+}
+
+#search::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.search-container::before {
+    content: "\1F50D"; /* Unicode character for magnifying glass */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+}
+
+.menu-icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    margin: 0;
+}
+
+.profile-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1200px;
+    height: 400px;
+    padding: 30px;
+}
+
+.profil {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+}
+
+.profile-info {
+    margin-left: 20px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #888;
+}
+
+.profile-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-menu button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    margin: 0 10px;
+}
+
+.profile-menu button.active {
+    border-bottom: 2px solid #f48b42;
+    color: #f48b42;
+}
+
+
+.recipe-table-container {
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.recipe-table th,
+.recipe-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.recipe-table th {
+    background-color: #f48b42;
+    color: white;
+}
+
+.recipe-table td {
+    background-color: #fff;
+    color: #333;
+}
+
+.table-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.edit-button,
+.delete-button {
+    padding: 6px 12px;
+    border: none;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-button {
+    background-color: #ddd;
+    margin-right: 10px;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}

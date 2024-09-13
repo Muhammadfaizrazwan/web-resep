@@ -1,9 +1,31 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{asset('styles.css')}}">
+    
+</head>
+<body>
+
+    
+    <form action="index" method="">
+        <h2>login</h2><br>
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <input type="submit" value="Login" >
+        <p>TIDAK PUNYA AKUN?<a href="register">KLIK DISINI!</a></p>
+    </form>
+
+    <?php
 // Database configuration
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "db_login"; 
+$database = "db_resep"; 
 
 // Membuat koneksi
 $conn = new mysqli($host, $username, $password, $database);
@@ -25,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Login berhasil
         session_start();
         $_SESSION["username"] = $username;
-        header("Location: index.php"); 
+        header("Location: index"); 
         exit();
     } else {
         // Login gagal
@@ -36,3 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Menutup koneksi
 $conn->close();
 ?>
+
+
+</body>
+</html>
