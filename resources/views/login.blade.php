@@ -1,64 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login</title>
-    <link rel="stylesheet" href="{{asset('styles.css')}}">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CookingStar</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-    
-    <form action="index" method="">
-        <h2>login</h2><br>
-        <label for="username">Username:</label>
-        <input type="text" name="username" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br><br>
-
-        <input type="submit" value="Login" >
-        <p>TIDAK PUNYA AKUN?<a href="register">KLIK DISINI!</a></p>
-    </form>
-
-    <?php
-// Database configuration
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "db_resep"; 
-
-// Membuat koneksi
-$conn = new mysqli($host, $username, $password, $database);
-
-// Memeriksa koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-    
-    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0) {
-        // Login berhasil
-        session_start();
-        $_SESSION["username"] = $username;
-        header("Location: index"); 
-        exit();
-    } else {
-        // Login gagal
-        echo "Login gagal. Silakan cek kembali username dan password Anda.";
-    }
-}
-
-// Menutup koneksi
-$conn->close();
-?>
-
-
+    <div class="container"><br>
+        <div class="col-md-4 col-md-offset-4">
+            <h2 class="text-center"><b>Selamat Datang</b><br>Di CookingStar</h3>
+            <hr>
+            @if(session('error'))
+            <div class="alert alert-danger">
+                <b>Opps!</b> {{session('error')}}
+            </div>
+            @endif
+            <form action="{{ route('actionlogin') }}" method="post">
+            @csrf
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Email" required="">
+                </div>
+                <div class="form-group">
+                    <label>username</label>
+                    <input type="username" name="username" class="form-control" placeholder="username" required="">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                <hr>
+                <p class="text-center">Belum punya akun? <a href="register">Register</a> sekarang!</p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

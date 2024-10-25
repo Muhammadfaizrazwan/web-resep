@@ -58,7 +58,7 @@ include('koneksi.php')
                     $host = 'localhost'; // Nama host, biasanya 'localhost'
                     $user = 'root';      // Username MySQL
                     $pass = '';          // Password MySQL
-                    $dbname = 'db_resep_makanan'; // Nama database
+                    $dbname = 'db_resep'; // Nama database
 
                     $conn = new mysqli($host, $user, $pass, $dbname);
 
